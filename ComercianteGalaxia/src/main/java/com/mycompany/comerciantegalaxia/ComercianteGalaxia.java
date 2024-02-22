@@ -38,7 +38,7 @@ public class ComercianteGalaxia {
         for (int i = 0; i < numeroGalactico.length(); i++) {
             char simbolo = numeroGalactico.charAt(i);
             int valorActual = obtenerValor(numeroGalactico.charAt(i));
-            char simboloSiguiente = numeroGalactico.charAt(i + 1);
+            char simboloSiguiente = 0;
 
             if (i > 0 && (simbolo == 'D' || simbolo == 'L' || simbolo == 'V') && simbolo == numeroGalactico.charAt(i - 1)) {
                 System.out.println("Error: Símbolo '" + simbolo + "' no puede repetirse.");
@@ -51,6 +51,7 @@ public class ComercianteGalaxia {
             }
 
             if (i + 1 < numeroGalactico.length()) {
+                simboloSiguiente = numeroGalactico.charAt(i + 1);
                 if (simbolo == 'I' && (simboloSiguiente == 'V' || simboloSiguiente == 'X')) {
                     System.out.println("prueba");
                 }
@@ -124,7 +125,7 @@ public class ComercianteGalaxia {
 
     public static void main(String[] args) {
         System.out.println("Hello World!");
-        String numeroGalactico = "XXXIX";
+        String numeroGalactico = "MMVI";
         int numeroArabigo = 1903;
         //MMVI
         //validaciones
